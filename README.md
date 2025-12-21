@@ -320,10 +320,6 @@ Because this template use Webpack maybe you can get errors during deployment, Pl
 - [Tilt.js](https://gijsroge.github.io/tilt.js/) - JavaScript tiny parallax library
 - [Popper.js](https://popper.js.org/) - JavaScript popover library
 
-## Authors
-
-- **Jacobo Martinez** - [https://github.com/cobidev](https://github.com/cobidev)
-
 ## Status
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/75600296-89eb-4640-9e7e-fa87fba7ce76/deploy-status)](https://app.netlify.com/sites/simplfolio/deploys)
@@ -335,3 +331,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments 🎁
 
 I was motivated to create this project because I wanted to contribute on something useful for the dev community, thanks to [ZTM Community](https://github.com/zero-to-mastery) and [Andrei](https://github.com/aneagoie)
+
