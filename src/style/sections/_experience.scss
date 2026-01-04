@@ -1,0 +1,74 @@
+#experience {
+  padding: $section-padding;
+  background: $white-color;
+
+  .experience-content {
+    max-width: 800px;
+  }
+
+  .experience-item {
+    background: $light-bg;
+    border-radius: $radius-lg;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    transition: all $transition-base;
+
+    &:hover {
+      box-shadow: $shadow-md;
+    }
+  }
+
+  .experience-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: $dark-text;
+  }
+
+  .experience-company {
+    font-size: 1.8rem;
+    color: $primary-color;
+    font-weight: 500;
+  }
+
+  .experience-date {
+    font-size: 1.4rem;
+    color: $light-text;
+    margin-left: auto;
+    font-family: 'Monaco', 'Courier New', monospace;
+  }
+
+  .experience-description {
+    p {
+      font-size: 1.6rem;
+      line-height: 1.8;
+      color: $light-text;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .experience-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    margin-top: 1.5rem;
+
+    li {
+      font-size: 1.3rem;
+      padding: 0.5rem 1.2rem;
+      background: $white-color;
+      border-radius: $radius-sm;
+      color: $primary-color;
+      font-weight: 500;
+    }
+  }
+}
+

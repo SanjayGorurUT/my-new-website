@@ -1,69 +1,83 @@
 .footer {
-  background-color: $dark-grey;
+  background-color: $dark-bg;
   color: $white-color;
-  padding: 4.8rem 0;
+  padding: 4rem 0;
+  position: relative;
 
-  @include respond(phone) {
-    border: 0px;
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @include respond(phone) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
-  &__text {
-    color: darken(white, 50%);
-    font-size: 1.3rem;
+  &-text {
+    color: $light-text;
+    font-size: 1.4rem;
+  }
+
+  &-social {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
 
     a {
-      color: darken(white, 50%);
-      font-size: 1.3rem;
-      transition: all 0.4s;
-      display: inline-block;
-      background-color: $dark-grey;
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      color: $light-text;
+      font-size: 1.8rem;
+      transition: all $transition-base;
 
-      &:hover,
-      &:active {
-        color: $primary-color;
-        -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+      &:hover {
+        background: $primary-color;
+        color: $white-color;
+        transform: translateY(-3px);
       }
     }
   }
-
-  & hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    width: 50%;
-    border-top: 2px solid rgba(255, 255, 255, 0.1);
-  }
 }
 
-.social-links {
+.back-to-top {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 5rem;
+  height: 5rem;
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: center;
-
-  a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: $white-color;
-    font-size: 3rem;
-    width: 5rem;
-    height: 5rem;
-    margin: $default-font-size $default-font-size;
-    transition: all 0.2s ease-in;
-
-    &:hover {
-      transform: translateY(-2px);
-    }
-  }
-}
-
-.back-to-top i {
+  background: $primary-color;
+  border-radius: 50%;
   color: $white-color;
-  margin: 1rem 0 $default-font-size;
-  transition: all 0.2s ease-in;
+  font-size: 2rem;
+  text-decoration: none;
+  box-shadow: $shadow-md;
+  transition: all $transition-base;
+
+  @include respond(phone) {
+    position: static;
+    margin: 2rem auto 0;
+  }
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: $shadow-lg;
+    background: $secondary-color;
   }
+}
+
+// Legacy support
+.social-links {
+  @extend .footer-social;
 }

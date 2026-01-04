@@ -6,83 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
 
-    <!-- Put here your site title -->
-    <title> Sanjay Gorur | Software Engineer </title>
-    <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
-    <meta name="keywords" content="[username], [name], skill" />
-    <!-- Improve your SEO by adding a small descrption of you -->
-    <meta name="description" content="Sanjay Gorur | Software Engineer" />
+    <title>Sanjay Gorur | Software Engineer | Georgia Tech</title>
+    <meta name="keywords" content="Sanjay Gorur, Software Engineer, Georgia Tech, SWE, Machine Learning, AI" />
+    <meta name="description" content="Sanjay Gorur - Software Engineer & Masters Student at Georgia Tech. Specializing in AI/ML, Backend Systems, and Distributed Computing." />
 
     <!-- Required librarys -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
       ScrollReveal({ reset: false });
     </script>
-
-    <!-- Remove this script once you setup your custom portfolio -->
   </head>
 
-  <!-- Follow the HTML instructions to create your stunning portfolio website -->
   <body>
     <div id="top"></div>
 
-    <!-- **** Hero Section **** -->
-    <div id="hero" class="jumbotron">
+    <!-- Navigation -->
+    <nav class="navbar">
       <div class="container">
-        <h1 class="hero-title" class="load-hidden">
-          Hi, my name is <span class="text-color-main">Sanjay Gorur</span>
-          <br />
-          I enjoy coding, playing sports, and venturing!
-        </h1>
-        <p class="hero-cta" class="load-hidden">
-          <a class="cta-btn cta-btn--hero" href="#about">Learn more</a>
-        </p>
+        <div class="navbar-content">
+          <a href="#top" class="navbar-brand">SG</a>
+          <ul class="navbar-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
+
+    <!-- **** Hero Section **** -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="hero-greeting">Hi, my name is</p>
+          <h1 class="hero-title">
+            <span class="hero-name">Sanjay Gorur</span>
+          </h1>
+          <h2 class="hero-subtitle">Software Engineer & AI Researcher</h2>
+          <p class="hero-description">
+            I'm a Masters student at Georgia Tech specializing in AI/ML, with experience 
+            building scalable backend systems. Currently exploring opportunities in software 
+            engineering and machine learning research.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projects">View My Work</a>
+            <a class="btn btn-secondary" href="#contact">Get In Touch</a>
+          </div>
+          <div class="hero-social">
+            <a href="https://www.linkedin.com/in/sanjaygorur/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/SanjayGorurUT" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://sanjaygorur2001.medium.com/" target="_blank" aria-label="Medium">
+              <i class="fab fa-medium"></i>
+            </a>
+            <a href="https://twitter.com/gorur_sanjay" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- /END Hero Section -->
 
     <!-- **** About Section **** -->
-    <section id="about">
+    <section id="about" class="about">
       <div class="container">
         <h2 class="section-title">
-          About me
+          <span class="section-number">01.</span>
+          About Me
         </h2>
-        <div class="row about-wrapper">
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__image">
-              <img
-                class="img-fluid rounded shadow-lg"
-                height="auto"
-                width="300px"
-                src="./assets/profile.jpg"
-                alt="Profile Image"
-              />
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I recently graduated from UT with a degree in Computer Engineering. After spending 
+              a year with <strong>Voxer</strong> as a backend software engineer in downtown Austin, 
+              I joined the <strong>Georgia Tech</strong> master's program with a focus on the AI track.
+            </p>
+            <p>
+              My interests lie at the intersection of software engineering and machine learning. 
+              I enjoy building scalable systems, working with distributed computing frameworks, 
+              and applying ML techniques to solve real-world problems.
+            </p>
+            <p>
+              During my free time, I enjoy playing basketball and chess. I'm always open to 
+              tackling new challenges and embracing new opportunities. Feel free to reach out!
+            </p>
+            <div class="about-links">
+              <a target="_blank" class="btn btn-outline" href="https://www.linkedin.com/in/sanjaygorur/">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+              <a target="_blank" class="btn btn-outline" href="https://www.overleaf.com/read/jfmxwcrfsfmk#529fc3">
+                <i class="fas fa-file-pdf"></i> Resume
+              </a>
             </div>
           </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__info">
-              <p class="about-wrapper__info-text">
-                I recently graduated from UT with a degree in computer engineering. After spending a year with Voxer as a backend software engineer in downtown Austin, I joined the Georgia Tech master's program with a focus on the AI track.
-              </p>
-              <p class="about-wrapper__info-text">
-                During my free time, I prefer playing basketball and chess. I'm spending this summer competing in EA CFB 26 online mode,
-		but I'm back to working on personal projects now as well as helping the homeless. 
-              </p>
-              <p class="about-wrapper__info-text">
-                Always open to tackling new challenges and embracing new opportunities. Just reach out via LinkedIn!
-              </p>
-              <span class="d-flex mt-3">
-                <a target="_blank" class="cta-btn cta-btn--resume" href="https://www.linkedin.com/in/sanjaygorur/">
-                  LinkedIn
-                </a>
-		            <a target="_blank" class="cta-btn cta-btn--resume" href="https://www.overleaf.com/read/jfmxwcrfsfmk#529fc3">
-                  Resume
-                </a>
-              </span>
+          <div class="about-image">
+            <div class="image-wrapper">
+              <img
+                class="profile-image"
+                src="./assets/profile.jpg"
+                alt="Sanjay Gorur"
+              />
             </div>
           </div>
         </div>
@@ -90,158 +123,245 @@
     </section>
     <!-- /END About Section -->
 
-    <!-- **** Projects Section **** -->
-    <section id="projects">
+    <!-- **** Experience Section **** -->
+    <section id="experience" class="experience">
       <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">
-            Projects/Work
-          </h2>
-
-          <!-- Each .row is a project -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Predicting Patient Mortality Using Graph CNN Training</h3>
-                <div>
-                  <p class="mb-4">
-                    Electronic health records contain valuable information in regards to patients’ features and can be manipulated to observe similarities where patients overlap to predict diagnoses. In order to detect such patient risk, a graph is constructed by extracting relevant features to relate patients in the EHRs and thus create a homogeneous graph to assess patient similarity. A novel GCN training algorithm alike Cluster-GCN is further used to predict mortality risk of patients by exploiting the graph clustering structure through node classification. 
-                  </p>
-                </div>
-                <a target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/SanjayGorurUT/IUPUI">
-                  Source Code
-                </a>
-		<a target="_blank" class="cta-btn cta-btn--hero" href="http://et.engr.iupui.edu/~fengli/REU/2021/poster3.pdf">
-		  Poster
-		</a>
-              </div>
+        <h2 class="section-title">
+          <span class="section-number">02.</span>
+          Experience
+        </h2>
+        <div class="experience-content">
+          <div class="experience-item">
+            <div class="experience-header">
+              <h3 class="experience-title">Backend Software Engineer</h3>
+              <span class="experience-company">@ Voxer</span>
+              <span class="experience-date">2024 - 2025</span>
             </div>
-            <div class="col-lg-8 col-sm-8">
-              <div class="project-wrapper__image">
-                <a href="#!" target="_blank">
-                  <div data-tilt class="thumbnail rounded">
-                    <img class="img-fluid" src="https://i.ibb.co/7WVXH2r/Cluster-GCN.png" />
-                  </div>
-                </a>
-              </div>
+            <div class="experience-description">
+              <p>
+                Developed and maintained scalable backend systems for real-time communication 
+                infrastructure. Worked on distributed systems, API development, and performance 
+                optimization in a production environment.
+              </p>
+              <ul class="experience-tech">
+                <li>Backend Development</li>
+                <li>Distributed Systems</li>
+                <li>API Design</li>
+                <li>Performance Optimization</li>
+              </ul>
             </div>
           </div>
-          <!-- /END Project -->
+        </div>
+      </div>
+    </section>
+    <!-- /END Experience Section -->
 
-	<!-- Each .row is a project -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Senior Design Project</h3>
-                <div>
-                  <p class="mb-4">
-                    My senior design project focused on the prototyping of a federated learning framework that deploys in-network data aggregation. Furthermore, we intended to design an algorithm that adaptively decides how to route data and how to optimize the convergence rate of federated learning.
-                  </p>
-                </div>
-                <a target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/SanjayGorurUT/EE364D">
-                  Source Code
-                </a>
-                <a target="_blank" class="cta-btn cta-btn--hero" href="https://arxiv.org/pdf/2301.04430.pdf">
-                  Related Paper
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image">
-                <a href="#!" target="_blank">
-                  <div data-tilt class="thumbnail rounded">
-                    <img class="img-fluid" src="https://www.frontiersin.org/files/Articles/1617597/fcomp-07-1617597-HTML/image_m/fcomp-07-1617597-g001.jpg" />
-                  </div>
-                </a>
-              </div>
+    <!-- **** Skills Section **** -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">03.</span>
+          Skills & Technologies
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="skill-category-title">Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Go</span>
             </div>
           </div>
-          <!-- /END Project -->
-
-          <!-- Each .row is a project -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">GitHub Profiles</h3>
-                <div>
-                  <p class="mb-4">
-                    Check out my personal and professional projects using the link below. For more information on what I did during my recent software internships, please reach out to me on LinkedIn.   
-                  </p>
-                </div>
-                <a target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/SanjayGorur">
-                  Personal
-                </a>
-		<a target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/SanjayGorurUT">
-                  Professional
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image">
-                <a href="#!" target="_blank">
-                  <div data-tilt class="thumbnail rounded">
-                    <img class="img-fluid" src="https://st2.depositphotos.com/1907633/8862/i/600/depositphotos_88627992-stock-photo-business-man-hand-working-on.jpg" />
-                  </div>
-                </a>
-              </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Frameworks & Libraries</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Django</span>
             </div>
           </div>
-          <!-- /END Project -->
+          <div class="skill-category">
+            <h3 class="skill-category-title">Tools & Technologies</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Kubernetes</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">ML/AI</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Graph Neural Networks</span>
+              <span class="skill-tag">Federated Learning</span>
+              <span class="skill-tag">Deep Learning</span>
+              <span class="skill-tag">Computer Vision</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /END Skills Section -->
+
+    <!-- **** Projects Section **** -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">04.</span>
+          Featured Projects
+        </h2>
+        
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/SanjayGorurUT/IUPUI" target="_blank" aria-label="Source Code">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="http://et.engr.iupui.edu/~fengli/REU/2021/poster3.pdf" target="_blank" aria-label="Poster">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Predicting Patient Mortality Using Graph CNN</h3>
+            <p class="project-description">
+              Developed a novel Graph Convolutional Network (GCN) training algorithm similar to 
+              Cluster-GCN to predict patient mortality risk from Electronic Health Records. 
+              Constructed homogeneous patient graphs by extracting relevant features and exploiting 
+              graph clustering structure through node classification.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>PyTorch</span>
+              <span>Graph Neural Networks</span>
+              <span>Healthcare AI</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/SanjayGorurUT/EE364D" target="_blank" aria-label="Source Code">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://arxiv.org/pdf/2301.04430.pdf" target="_blank" aria-label="Paper">
+                  <i class="fas fa-file-pdf"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Federated Learning with In-Network Aggregation</h3>
+            <p class="project-description">
+              Senior design project focused on prototyping a federated learning framework that 
+              deploys in-network data aggregation. Designed an adaptive routing algorithm to 
+              optimize data routing and convergence rate of federated learning systems.
+            </p>
+            <div class="project-tech">
+              <span>Federated Learning</span>
+              <span>Distributed Systems</span>
+              <span>Network Optimization</span>
+              <span>Python</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/SanjayGorur" target="_blank" aria-label="Personal GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://github.com/SanjayGorurUT" target="_blank" aria-label="Professional GitHub">
+                  <i class="fas fa-briefcase"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Open Source Contributions</h3>
+            <p class="project-description">
+              Active contributor to various open-source projects. Check out my personal and 
+              professional repositories for more projects, including software engineering 
+              work, ML research, and system design implementations.
+            </p>
+            <div class="project-tech">
+              <span>Open Source</span>
+              <span>Software Engineering</span>
+              <span>Full Stack</span>
+              <span>ML Projects</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- /END Projects Section -->
     
     <!-- **** Contact Section **** -->
-    <section id="contact">
+    <section id="contact" class="contact">
       <div class="container">
         <h2 class="section-title">
-          Contact
+          <span class="section-number">05.</span>
+          Get In Touch
         </h2>
-        <div class="contact-wrapper">
-          <p class="contact-wrapper__text">
-            Want to collaborate or just chat?
+        <div class="contact-content">
+          <p class="contact-text">
+            I'm currently looking for software engineering opportunities, particularly in 
+            backend systems, ML infrastructure, or distributed computing. Whether you have 
+            a question or just want to say hi, I'll try my best to get back to you!
           </p>
           <a
             target="_blank"
-            class="cta-btn cta-btn--resume"
+            class="btn btn-primary btn-large"
             href="mailto:sanjaygorurwork@gmail.com"
-            >Click Here</a
           >
+            Say Hello
+          </a>
         </div>
       </div>
     </section>
     <!-- /END Contact Section -->
 
     <!-- **** Footer Section **** -->
-    <footer class="footer navbar-static-bottom">
+    <footer class="footer">
       <div class="container">
-        <a href="#top" class="back-to-top">
-          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-        </a>
-        <div class="social-links">
-          <a href="https://twitter.com/gorur_sanjay" target="_blank">
-            <i class="fa fa-twitter fa-inverse"></i>
-          </a>
-          <a href="https://sanjaygorur2001.medium.com/" target="_blank">
-            <i class="fa fa-medium fa-inverse"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/sanjaygorur/" target="_blank">
-            <i class="fa fa-linkedin fa-inverse"></i>
-          </a>
-          <a href="https://github.com/SanjayGorurUT" target="_blank">
-            <i class="fa fa-github fa-inverse"></i>
-          </a>
+        <div class="footer-content">
+          <p class="footer-text">
+            Designed & Built by Sanjay Gorur
+          </p>
+          <div class="footer-social">
+            <a href="https://twitter.com/gorur_sanjay" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://sanjaygorur2001.medium.com/" target="_blank" aria-label="Medium">
+              <i class="fab fa-medium"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sanjaygorur/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/SanjayGorurUT" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
         </div>
-
-        <hr />
-
+        <a href="#top" class="back-to-top">
+          <i class="fas fa-arrow-up"></i>
+        </a>
       </div>
     </footer>
     <!-- /END Footer Section -->
   </body>
 </html>
-
-
-
-
