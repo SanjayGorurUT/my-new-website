@@ -7,6 +7,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
+// Ensure we use sass (Dart Sass) instead of node-sass
+let sassImplementation;
+try {
+  sassImplementation = require('sass');
+} catch (e) {
+  console.error('sass (Dart Sass) not found. Please install it: npm install sass --save-dev');
+  process.exit(1);
+}
+
 module.exports = merge(common, {
   mode: 'production',
   output: {
@@ -41,7 +50,15 @@ module.exports = merge(common, {
         use: [
           MiniCssExtractPlugin.loader, //3. Extract css into files
           'css-loader', //2. Turns css into commonjs
-          'sass-loader'
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: sassImplementation, // Use Dart Sass instead of node-sass
+              sassOptions: {
+                outputStyle: 'expanded',
+              },
+            }
+          }
         ] //1. Turns sass into css
       }
     ]
