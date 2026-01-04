@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Use Node 16 which doesn't require --openssl-legacy-provider
+# This avoids the NODE_OPTIONS restriction on Netlify
+[build.environment]
+  NODE_VERSION = "16"
+
+# Alternative: If you need Node 18+, you can try setting NODE_OPTIONS
+# but Netlify may block it for security reasons
+
