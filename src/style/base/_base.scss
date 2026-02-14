@@ -25,10 +25,14 @@ body {
 .container {
   max-width: $container-max-width;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 4rem;
 
   @include respond(tab-land) {
     padding: 0 3rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 0 2.5rem;
   }
 
   @include respond(phone) {
@@ -37,17 +41,18 @@ body {
 }
 
 .section-title {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.2rem;
+  font-weight: 800;
   color: $dark-text;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
   white-space: nowrap;
+  letter-spacing: -0.03em;
 
   @include respond(phone) {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
@@ -55,9 +60,10 @@ body {
 
   .section-number {
     color: $primary-color;
-    font-family: 'Monaco', 'Courier New', monospace;
-    font-size: 2rem;
-    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    opacity: 0.8;
   }
 }
 
@@ -67,12 +73,13 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: $shadow-sm;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   z-index: 1000;
-  padding: 1.5rem 0;
+  padding: 1.8rem 0;
   transition: all $transition-base;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 
   &-content {
     display: flex;
@@ -81,11 +88,16 @@ body {
   }
 
   &-brand {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 800;
     color: $primary-color;
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: -0.02em;
+    transition: all $transition-fast;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   &-menu {

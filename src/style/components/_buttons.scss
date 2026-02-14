@@ -1,29 +1,33 @@
-// Modern Button Styles
+// Human, Tactile Button Styles
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  padding: 1.2rem 2.4rem;
-  font-size: 1.4rem;
+  padding: 1.3rem 2.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   text-decoration: none;
-  border-radius: $radius-md;
-  transition: all $transition-base;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   border: 2px solid transparent;
   white-space: nowrap;
+  letter-spacing: -0.01em;
+  position: relative;
+  overflow: hidden;
 
   i {
     font-size: 1.2rem;
   }
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: $shadow-md;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 
   &:active {
-    transform: translateY(0);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -31,21 +35,26 @@
   background: $gradient-primary;
   color: $white-color;
   border-color: transparent;
+  box-shadow: 0 4px 12px rgba(91, 127, 255, 0.25);
 
   &:hover {
     color: $white-color;
-    box-shadow: $shadow-lg;
+    box-shadow: 0 8px 24px rgba(91, 127, 255, 0.35);
+    background: linear-gradient(135deg, #6B8AFF 0%, #8B4DFF 100%);
   }
 }
 
 .btn-secondary {
-  background: transparent;
+  background: rgba(91, 127, 255, 0.08);
   color: $primary-color;
-  border-color: $primary-color;
+  border-color: rgba(91, 127, 255, 0.3);
+  backdrop-filter: blur(10px);
 
   &:hover {
     background: $primary-color;
     color: $white-color;
+    border-color: $primary-color;
+    box-shadow: 0 8px 20px rgba(91, 127, 255, 0.25);
   }
 }
 

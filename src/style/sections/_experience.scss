@@ -1,48 +1,111 @@
 #experience {
   padding: $section-padding;
   background: $white-color;
+  position: relative;
 
-  .experience-content {
-    max-width: 800px;
+  .experience-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 4rem;
+
+    @include respond(phone) {
+      padding-left: 2.5rem;
+    }
+  }
+
+  .timeline-line {
+    position: absolute;
+    left: 1.5rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, $primary-color 0%, rgba(91, 127, 255, 0.3) 100%);
+    border-radius: 2px;
+
+    @include respond(phone) {
+      left: 1rem;
+    }
   }
 
   .experience-item {
-    background: $light-bg;
-    border-radius: $radius-lg;
-    padding: 3rem;
-    margin-bottom: 2rem;
-    transition: all $transition-base;
+    position: relative;
+    margin-bottom: 4rem;
+    padding-left: 3rem;
+
+    @include respond(phone) {
+      padding-left: 2rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2.5rem;
+    top: 0.5rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background: $primary-color;
+    border: 4px solid $white-color;
+    box-shadow: 0 0 0 3px rgba(91, 127, 255, 0.2), 0 4px 12px rgba(91, 127, 255, 0.3);
+    z-index: 2;
+
+    @include respond(phone) {
+      left: -1.8rem;
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+
+  .experience-content {
+    background: $warm-bg;
+    border-radius: 16px;
+    padding: 3.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.04);
 
     &:hover {
-      box-shadow: $shadow-md;
+      box-shadow: 0 8px 24px rgba(91, 127, 255, 0.12);
+      transform: translateX(8px);
+      border-color: rgba(91, 127, 255, 0.1);
     }
   }
 
   .experience-header {
     display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .experience-title-group {
+    display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     gap: 1rem;
-    margin-bottom: 1.5rem;
   }
 
   .experience-title {
-    font-size: 2.2rem;
-    font-weight: 600;
+    font-size: 2.4rem;
+    font-weight: 700;
     color: $dark-text;
   }
 
   .experience-company {
     font-size: 1.8rem;
     color: $primary-color;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .experience-date {
     font-size: 1.4rem;
     color: $light-text;
-    margin-left: auto;
-    font-family: 'Monaco', 'Courier New', monospace;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
   }
 
   .experience-description {
@@ -63,14 +126,22 @@
 
     li {
       font-size: 1.3rem;
-      padding: 0.5rem 1.2rem;
+      padding: 0.6rem 1.4rem;
       background: $white-color;
-      border-radius: $radius-sm;
+      border-radius: 8px;
       color: $primary-color;
       font-weight: 500;
+      border: 1px solid rgba(91, 127, 255, 0.15);
+      transition: all $transition-fast;
+
+      &:hover {
+        background: rgba(91, 127, 255, 0.08);
+        transform: translateY(-2px);
+      }
     }
   }
 }
+
 
 
 

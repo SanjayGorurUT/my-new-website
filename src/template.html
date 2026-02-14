@@ -43,31 +43,35 @@
     <!-- **** Hero Section **** -->
     <section id="hero" class="hero">
       <div class="container">
-        <div class="hero-content">
-          <p class="hero-greeting">Hi, my name is</p>
-          <h1 class="hero-title">
-            <span class="hero-name">Sanjay Gorur</span>
-          </h1>
-          <h2 class="hero-subtitle">Software Engineer & AI Researcher</h2>
-          <p class="hero-description">
-            I'm a Masters student at Georgia Tech specializing in AI/ML, with experience 
-            building scalable backend systems. Currently exploring opportunities in software 
-            engineering and machine learning research.
-          </p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#projects">View My Work</a>
-            <a class="btn btn-secondary" href="#contact">Get In Touch</a>
+        <div class="hero-wrapper">
+          <div class="hero-content">
+            <p class="hero-greeting">Hi, my name is</p>
+            <h1 class="hero-title">
+              <span class="hero-name">Sanjay Gorur</span>
+            </h1>
+            <h2 class="hero-subtitle">Software Engineer & AI Researcher</h2>
+            <p class="hero-description">
+              I'm a Masters student at Georgia Tech specializing in AI/ML, with experience 
+              building scalable backend systems. Currently exploring opportunities in software 
+              engineering and machine learning research.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#projects">View My Work</a>
+              <a class="btn btn-secondary" href="#contact">Get In Touch</a>
+            </div>
           </div>
-          <div class="hero-social">
-            <a href="https://www.linkedin.com/in/sanjaygorur/" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/SanjayGorurUT" target="_blank" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://twitter.com/gorur_sanjay" target="_blank" aria-label="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
+          <div class="hero-side">
+            <div class="hero-social">
+              <a href="https://www.linkedin.com/in/sanjaygorur/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/SanjayGorurUT" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://twitter.com/gorur_sanjay" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -77,11 +81,22 @@
     <!-- **** About Section **** -->
     <section id="about" class="about">
       <div class="container">
-        <h2 class="section-title">
-          <span class="section-number">01.</span>
-          About Me
-        </h2>
+        <div class="about-header">
+          <h2 class="section-title">
+            <span class="section-number">01.</span>
+            About Me
+          </h2>
+        </div>
         <div class="about-content">
+          <div class="about-image">
+            <div class="image-wrapper">
+              <img
+                class="profile-image"
+                src="./assets/profile.jpg"
+                alt="Sanjay Gorur"
+              />
+            </div>
+          </div>
           <div class="about-text">
             <p>
               I recently graduated from UT with a degree in Computer Engineering. After spending 
@@ -106,15 +121,6 @@
               </a>
             </div>
           </div>
-          <div class="about-image">
-            <div class="image-wrapper">
-              <img
-                class="profile-image"
-                src="./assets/profile.jpg"
-                alt="Sanjay Gorur"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -127,25 +133,31 @@
           <span class="section-number">02.</span>
           Experience
         </h2>
-        <div class="experience-content">
+        <div class="experience-timeline">
+          <div class="timeline-line"></div>
           <div class="experience-item">
-            <div class="experience-header">
-              <h3 class="experience-title">Backend Software Engineer</h3>
-              <span class="experience-company">@ Voxer</span>
-              <span class="experience-date">2024 - 2025</span>
-            </div>
-            <div class="experience-description">
-              <p>
-                Developed and maintained scalable backend systems for real-time communication 
-                infrastructure. Worked on distributed systems, API development, and performance 
-                optimization in a production environment.
-              </p>
-              <ul class="experience-tech">
-                <li>Backend Development</li>
-                <li>Distributed Systems</li>
-                <li>API Design</li>
-                <li>Performance Optimization</li>
-              </ul>
+            <div class="timeline-dot"></div>
+            <div class="experience-content">
+              <div class="experience-header">
+                <div class="experience-title-group">
+                  <h3 class="experience-title">Backend Software Engineer</h3>
+                  <span class="experience-company">@ Voxer</span>
+                </div>
+                <span class="experience-date">2024 - 2025</span>
+              </div>
+              <div class="experience-description">
+                <p>
+                  Developed and maintained scalable backend systems for real-time communication 
+                  infrastructure. Worked on distributed systems, API development, and performance 
+                  optimization in a production environment.
+                </p>
+                <ul class="experience-tech">
+                  <li>Backend Development</li>
+                  <li>Distributed Systems</li>
+                  <li>API Design</li>
+                  <li>Performance Optimization</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -160,45 +172,49 @@
           <span class="section-number">03.</span>
           Skills & Technologies
         </h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3 class="skill-category-title">Languages</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">C++</span>
-              <span class="skill-tag">Go</span>
+        <div class="skills-layout">
+          <div class="skills-left">
+            <div class="skill-category">
+              <h3 class="skill-category-title">Languages</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Go</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3 class="skill-category-title">Frameworks & Libraries</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Django</span>
+              </div>
             </div>
           </div>
-          <div class="skill-category">
-            <h3 class="skill-category-title">Frameworks & Libraries</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">PyTorch</span>
-              <span class="skill-tag">TensorFlow</span>
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">Django</span>
+          <div class="skills-right">
+            <div class="skill-category">
+              <h3 class="skill-category-title">Tools & Technologies</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">PostgreSQL</span>
+              </div>
             </div>
-          </div>
-          <div class="skill-category">
-            <h3 class="skill-category-title">Tools & Technologies</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">Kubernetes</span>
-              <span class="skill-tag">AWS</span>
-              <span class="skill-tag">Git</span>
-              <span class="skill-tag">Linux</span>
-              <span class="skill-tag">PostgreSQL</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3 class="skill-category-title">ML/AI</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Graph Neural Networks</span>
-              <span class="skill-tag">Federated Learning</span>
-              <span class="skill-tag">Deep Learning</span>
-              <span class="skill-tag">Computer Vision</span>
+            <div class="skill-category">
+              <h3 class="skill-category-title">ML/AI</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Graph Neural Networks</span>
+                <span class="skill-tag">Federated Learning</span>
+                <span class="skill-tag">Deep Learning</span>
+                <span class="skill-tag">Computer Vision</span>
+              </div>
             </div>
           </div>
         </div>
@@ -214,9 +230,9 @@
           Featured Projects
         </h2>
         
-        <div class="projects-grid">
+        <div class="projects-masonry">
           <!-- Project 1 -->
-          <div class="project-card">
+          <div class="project-card project-card-large">
             <div class="project-header">
               <div class="project-icon">
                 <i class="fas fa-brain"></i>
@@ -246,7 +262,7 @@
           </div>
 
           <!-- Project 2 -->
-          <div class="project-card">
+          <div class="project-card project-card-medium">
             <div class="project-header">
               <div class="project-icon">
                 <i class="fas fa-network-wired"></i>
@@ -275,7 +291,7 @@
           </div>
 
           <!-- Project 3 -->
-          <div class="project-card">
+          <div class="project-card project-card-small">
             <div class="project-header">
               <div class="project-icon">
                 <i class="fab fa-github"></i>
@@ -310,23 +326,25 @@
     <!-- **** Contact Section **** -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2 class="section-title">
-          <span class="section-number">05.</span>
-          Get In Touch
-        </h2>
-        <div class="contact-content">
-          <p class="contact-text">
-            I'm currently looking for software engineering opportunities, particularly in 
-            backend systems, ML infrastructure, or distributed computing. Whether you have 
-            a question or just want to say hi, I'll try my best to get back to you!
-          </p>
-          <a
-            target="_blank"
-            class="btn btn-primary btn-large"
-            href="mailto:sanjaygorurwork@gmail.com"
-          >
-            Say Hello
-          </a>
+        <div class="contact-wrapper">
+          <div class="contact-content">
+            <h2 class="section-title">
+              <span class="section-number">05.</span>
+              Get In Touch
+            </h2>
+            <p class="contact-text">
+              I'm currently looking for software engineering opportunities, particularly in 
+              backend systems, ML infrastructure, or distributed computing. Whether you have 
+              a question or just want to say hi, I'll try my best to get back to you!
+            </p>
+            <a
+              target="_blank"
+              class="btn btn-primary btn-large"
+              href="mailto:sanjaygorurwork@gmail.com"
+            >
+              Say Hello
+            </a>
+          </div>
         </div>
       </div>
     </section>

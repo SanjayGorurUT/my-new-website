@@ -2,10 +2,15 @@
   padding: $section-padding;
   background: $light-bg;
 
-  .projects-grid {
+  .projects-masonry {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2.5rem;
+    grid-auto-rows: min-content;
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(6, 1fr);
+    }
 
     @include respond(phone) {
       grid-template-columns: 1fr;
@@ -14,18 +19,70 @@
   }
 
   .project-card {
+    grid-column: span 4;
+
+    @include respond(tab-land) {
+      grid-column: span 6;
+    }
+
+    @include respond(phone) {
+      grid-column: span 1;
+    }
+
+    &.project-card-large {
+      grid-column: span 6;
+      grid-row: span 2;
+
+      @include respond(tab-land) {
+        grid-column: span 6;
+        grid-row: span 1;
+      }
+
+      @include respond(phone) {
+        grid-column: span 1;
+      }
+    }
+
+    &.project-card-medium {
+      grid-column: span 6;
+
+      @include respond(tab-land) {
+        grid-column: span 6;
+      }
+
+      @include respond(phone) {
+        grid-column: span 1;
+      }
+    }
+
+    &.project-card-small {
+      grid-column: span 4;
+
+      @include respond(tab-land) {
+        grid-column: span 6;
+      }
+
+      @include respond(phone) {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  .project-card {
     background: $white-color;
-    border-radius: $radius-lg;
-    padding: 3rem;
-    box-shadow: $shadow-sm;
-    transition: all $transition-base;
+    border-radius: 16px;
+    padding: 3.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.04);
 
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: $shadow-lg;
+      transform: translateY(-8px);
+      box-shadow: 0 16px 32px rgba(91, 127, 255, 0.15);
+      border-color: rgba(91, 127, 255, 0.1);
     }
 
     .project-header {
@@ -36,15 +93,16 @@
     }
 
     .project-icon {
-      width: 5rem;
-      height: 5rem;
+      width: 5.5rem;
+      height: 5.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
       background: $gradient-primary;
-      border-radius: $radius-md;
+      border-radius: 14px;
       color: $white-color;
       font-size: 2.4rem;
+      box-shadow: 0 4px 12px rgba(91, 127, 255, 0.25);
     }
 
     .project-links {
@@ -80,11 +138,12 @@
     }
 
     .project-description {
-      font-size: 1.5rem;
-      line-height: 1.7;
+      font-size: 1.55rem;
+      line-height: 1.8;
       color: $light-text;
       margin-bottom: 2rem;
       flex-grow: 1;
+      font-weight: 400;
     }
 
     .project-tech {
@@ -93,13 +152,20 @@
       gap: 1rem;
 
       span {
-        font-size: 1.2rem;
-        padding: 0.5rem 1.2rem;
-        background: $light-bg;
-        border-radius: $radius-sm;
+        font-size: 1.25rem;
+        padding: 0.6rem 1.4rem;
+        background: rgba(91, 127, 255, 0.08);
+        border-radius: 8px;
         color: $primary-color;
         font-weight: 500;
-        font-family: 'Monaco', 'Courier New', monospace;
+        font-family: 'Inter', sans-serif;
+        border: 1px solid rgba(91, 127, 255, 0.15);
+        transition: all $transition-fast;
+
+        &:hover {
+          background: rgba(91, 127, 255, 0.12);
+          transform: translateY(-2px);
+        }
       }
     }
   }
