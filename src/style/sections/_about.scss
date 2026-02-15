@@ -1,6 +1,7 @@
 #about {
   padding: $section-padding;
-  background: $warm-bg;
+  background: transparent;
+  position: relative;
 
   .about-header {
     margin-bottom: 6rem;
@@ -38,13 +39,14 @@
     p {
       font-size: 1.65rem;
       line-height: 1.85;
-      color: $light-text;
+      color: rgba(255, 255, 255, 0.8);
       margin-bottom: 2.2rem;
       font-weight: 400;
 
       strong {
-        color: $primary-color;
+        color: rgba(91, 127, 255, 0.9);
         font-weight: 600;
+        text-shadow: 0 0 10px rgba(91, 127, 255, 0.3);
       }
     }
   }

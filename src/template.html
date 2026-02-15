@@ -23,6 +23,12 @@
 
   <body>
     <div id="top"></div>
+    <!-- Space Background -->
+    <div class="space-background">
+      <div class="stars"></div>
+      <div class="stars2"></div>
+      <div class="stars3"></div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -82,10 +88,7 @@
     <section id="about" class="about">
       <div class="container">
         <div class="about-header">
-          <h2 class="section-title">
-            <span class="section-number">01.</span>
-            About Me
-          </h2>
+          <h2 class="section-title">About Me</h2>
         </div>
         <div class="about-content">
           <div class="about-image">
@@ -129,10 +132,7 @@
     <!-- **** Experience Section **** -->
     <section id="experience" class="experience">
       <div class="container">
-        <h2 class="section-title">
-          <span class="section-number">02.</span>
-          Experience
-        </h2>
+        <h2 class="section-title">Experience</h2>
         <div class="experience-timeline">
           <div class="timeline-line"></div>
           <div class="experience-item">
@@ -168,52 +168,205 @@
     <!-- **** Skills Section **** -->
     <section id="skills" class="skills">
       <div class="container">
-        <h2 class="section-title">
-          <span class="section-number">03.</span>
-          Skills & Technologies
-        </h2>
+        <h2 class="section-title">Skills & Technologies</h2>
         <div class="skills-layout">
-          <div class="skills-left">
-            <div class="skill-category">
-              <h3 class="skill-category-title">Languages</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">C++</span>
-                <span class="skill-tag">Go</span>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Languages</h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Python</span>
+                  <span class="skill-rating">9/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="9"></div>
+                </div>
               </div>
-            </div>
-            <div class="skill-category">
-              <h3 class="skill-category-title">Frameworks & Libraries</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">PyTorch</span>
-                <span class="skill-tag">TensorFlow</span>
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Django</span>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Java</span>
+                  <span class="skill-rating">8/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="8"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>JavaScript</span>
+                  <span class="skill-rating">7/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="7"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>C++</span>
+                  <span class="skill-rating">7/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="7"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Go</span>
+                  <span class="skill-rating">6/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="6"></div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="skills-right">
-            <div class="skill-category">
-              <h3 class="skill-category-title">Tools & Technologies</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">Kubernetes</span>
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">Linux</span>
-                <span class="skill-tag">PostgreSQL</span>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Frameworks & Libraries</h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>PyTorch</span>
+                  <span class="skill-rating">8/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="8"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>TensorFlow</span>
+                  <span class="skill-rating">7/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="7"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>React</span>
+                  <span class="skill-rating">7/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="7"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Node.js</span>
+                  <span class="skill-rating">7/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="7"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Django</span>
+                  <span class="skill-rating">6/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="6"></div>
+                </div>
               </div>
             </div>
-            <div class="skill-category">
-              <h3 class="skill-category-title">ML/AI</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">Graph Neural Networks</span>
-                <span class="skill-tag">Federated Learning</span>
-                <span class="skill-tag">Deep Learning</span>
-                <span class="skill-tag">Computer Vision</span>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Tools & Technologies</h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Docker</span>
+                  <span class="skill-rating">8/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="8"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Kubernetes</span>
+                  <span class="skill-rating">7/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="7"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>AWS</span>
+                  <span class="skill-rating">7/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="7"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Git</span>
+                  <span class="skill-rating">9/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="9"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Linux</span>
+                  <span class="skill-rating">8/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="8"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>PostgreSQL</span>
+                  <span class="skill-rating">7/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="7"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">ML/AI</h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Graph Neural Networks</span>
+                  <span class="skill-rating">8/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="8"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Federated Learning</span>
+                  <span class="skill-rating">7/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="7"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Deep Learning</span>
+                  <span class="skill-rating">8/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="8"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Computer Vision</span>
+                  <span class="skill-rating">7/10</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar-fill" data-rating="7"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -225,97 +378,119 @@
     <!-- **** Projects Section **** -->
     <section id="projects" class="projects">
       <div class="container">
-        <h2 class="section-title">
-          <span class="section-number">04.</span>
-          Featured Projects
-        </h2>
+        <h2 class="section-title">Featured Projects</h2>
         
-        <div class="projects-masonry">
+        <div class="projects-grid">
           <!-- Project 1 -->
-          <div class="project-card project-card-large">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fas fa-brain"></i>
+          <div class="project-card">
+            <div class="project-preview">
+              <div class="project-ui-mockup">
+                <div class="ui-window">
+                  <div class="ui-header">
+                    <div class="ui-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <div class="ui-content">
+                    <div class="ui-graph">
+                      <div class="graph-bar" style="height: 60%"></div>
+                      <div class="graph-bar" style="height: 80%"></div>
+                      <div class="graph-bar" style="height: 45%"></div>
+                      <div class="graph-bar" style="height: 90%"></div>
+                      <div class="graph-bar" style="height: 70%"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Graph CNN for Patient Mortality</h3>
+              <p class="project-description">
+                Novel GCN algorithm for predicting patient risk from EHR data using graph clustering.
+              </p>
               <div class="project-links">
-                <a href="https://github.com/SanjayGorurUT/IUPUI" target="_blank" aria-label="Source Code">
+                <a href="https://github.com/SanjayGorurUT/IUPUI" target="_blank">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="http://et.engr.iupui.edu/~fengli/REU/2021/poster3.pdf" target="_blank" aria-label="Poster">
+                <a href="http://et.engr.iupui.edu/~fengli/REU/2021/poster3.pdf" target="_blank">
                   <i class="fas fa-external-link-alt"></i>
                 </a>
               </div>
             </div>
-            <h3 class="project-title">Predicting Patient Mortality Using Graph CNN</h3>
-            <p class="project-description">
-              Developed a novel Graph Convolutional Network (GCN) training algorithm similar to 
-              Cluster-GCN to predict patient mortality risk from Electronic Health Records. 
-              Constructed homogeneous patient graphs by extracting relevant features and exploiting 
-              graph clustering structure through node classification.
-            </p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>PyTorch</span>
-              <span>Graph Neural Networks</span>
-              <span>Healthcare AI</span>
-            </div>
           </div>
 
           <!-- Project 2 -->
-          <div class="project-card project-card-medium">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fas fa-network-wired"></i>
+          <div class="project-card">
+            <div class="project-preview">
+              <div class="project-ui-mockup">
+                <div class="ui-window">
+                  <div class="ui-header">
+                    <div class="ui-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <div class="ui-content">
+                    <div class="ui-network">
+                      <div class="network-node"></div>
+                      <div class="network-node"></div>
+                      <div class="network-node"></div>
+                      <div class="network-line"></div>
+                      <div class="network-line"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Federated Learning Framework</h3>
+              <p class="project-description">
+                In-network aggregation system with adaptive routing for distributed ML training.
+              </p>
               <div class="project-links">
-                <a href="https://github.com/SanjayGorurUT/EE364D" target="_blank" aria-label="Source Code">
+                <a href="https://github.com/SanjayGorurUT/EE364D" target="_blank">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://arxiv.org/pdf/2301.04430.pdf" target="_blank" aria-label="Paper">
+                <a href="https://arxiv.org/pdf/2301.04430.pdf" target="_blank">
                   <i class="fas fa-file-pdf"></i>
                 </a>
               </div>
             </div>
-            <h3 class="project-title">Federated Learning with In-Network Aggregation</h3>
-            <p class="project-description">
-              Senior design project focused on prototyping a federated learning framework that 
-              deploys in-network data aggregation. Designed an adaptive routing algorithm to 
-              optimize data routing and convergence rate of federated learning systems.
-            </p>
-            <div class="project-tech">
-              <span>Federated Learning</span>
-              <span>Distributed Systems</span>
-              <span>Network Optimization</span>
-              <span>Python</span>
-            </div>
           </div>
 
           <!-- Project 3 -->
-          <div class="project-card project-card-small">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fab fa-github"></i>
+          <div class="project-card">
+            <div class="project-preview">
+              <div class="project-ui-mockup">
+                <div class="ui-window">
+                  <div class="ui-header">
+                    <div class="ui-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <div class="ui-content">
+                    <div class="ui-code">
+                      <div class="code-line"></div>
+                      <div class="code-line"></div>
+                      <div class="code-line short"></div>
+                      <div class="code-line"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Open Source Projects</h3>
+              <p class="project-description">
+                Contributions to various open-source projects in ML, backend systems, and full-stack development.
+              </p>
               <div class="project-links">
-                <a href="https://github.com/SanjayGorur" target="_blank" aria-label="Personal GitHub">
+                <a href="https://github.com/SanjayGorur" target="_blank">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://github.com/SanjayGorurUT" target="_blank" aria-label="Professional GitHub">
+                <a href="https://github.com/SanjayGorurUT" target="_blank">
                   <i class="fas fa-briefcase"></i>
                 </a>
               </div>
-            </div>
-            <h3 class="project-title">Open Source Contributions</h3>
-            <p class="project-description">
-              Active contributor to various open-source projects. Check out my personal and 
-              professional repositories for more projects, including software engineering 
-              work, ML research, and system design implementations.
-            </p>
-            <div class="project-tech">
-              <span>Open Source</span>
-              <span>Software Engineering</span>
-              <span>Full Stack</span>
-              <span>ML Projects</span>
             </div>
           </div>
         </div>
@@ -328,10 +503,7 @@
       <div class="container">
         <div class="contact-wrapper">
           <div class="contact-content">
-            <h2 class="section-title">
-              <span class="section-number">05.</span>
-              Get In Touch
-            </h2>
+            <h2 class="section-title">Get In Touch</h2>
             <p class="contact-text">
               I'm currently looking for software engineering opportunities, particularly in 
               backend systems, ML infrastructure, or distributed computing. Whether you have 

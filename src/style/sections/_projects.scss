@@ -1,72 +1,240 @@
 #projects {
   padding: $section-padding;
-  background: $light-bg;
+  background: transparent;
+  position: relative;
 
-  .projects-masonry {
+  .projects-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 2.5rem;
-    grid-auto-rows: min-content;
-
-    @include respond(tab-land) {
-      grid-template-columns: repeat(6, 1fr);
-    }
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
 
     @include respond(phone) {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 2.5rem;
     }
   }
 
   .project-card {
-    grid-column: span 4;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(91, 127, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
 
-    @include respond(tab-land) {
-      grid-column: span 6;
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(91, 127, 255, 0.3);
+      border-color: rgba(91, 127, 255, 0.4);
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+
+  .project-preview {
+    width: 100%;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(91, 127, 255, 0.2);
+  }
+
+  .project-ui-mockup {
+    width: 100%;
+    aspect-ratio: 16/10;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(91, 127, 255, 0.2);
+  }
+
+  .ui-window {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(20, 25, 40, 0.8);
+  }
+
+  .ui-header {
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(91, 127, 255, 0.2);
+  }
+
+  .ui-dots {
+    display: flex;
+    gap: 0.6rem;
+
+    span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(91, 127, 255, 0.4);
+      box-shadow: 0 0 8px rgba(91, 127, 255, 0.3);
+    }
+  }
+
+  .ui-content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ui-graph {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    height: 80%;
+    width: 100%;
+
+    .graph-bar {
+      flex: 1;
+      background: linear-gradient(180deg, rgba(91, 127, 255, 0.8) 0%, rgba(124, 58, 237, 0.8) 100%);
+      border-radius: 4px 4px 0 0;
+      box-shadow: 0 0 10px rgba(91, 127, 255, 0.4);
+      animation: growBar 1s ease-out;
+    }
+  }
+
+  .ui-network {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .network-node {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(91, 127, 255, 0.8) 0%, rgba(124, 58, 237, 0.6) 100%);
+      position: absolute;
+      box-shadow: 0 0 20px rgba(91, 127, 255, 0.5);
+      animation: pulse 2s infinite;
+
+      &:nth-child(1) { top: 20%; left: 20%; }
+      &:nth-child(2) { top: 60%; right: 20%; }
+      &:nth-child(3) { bottom: 20%; left: 50%; }
     }
 
-    @include respond(phone) {
-      grid-column: span 1;
-    }
+    .network-line {
+      position: absolute;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(91, 127, 255, 0.6), transparent);
+      box-shadow: 0 0 8px rgba(91, 127, 255, 0.4);
 
-    &.project-card-large {
-      grid-column: span 6;
-      grid-row: span 2;
-
-      @include respond(tab-land) {
-        grid-column: span 6;
-        grid-row: span 1;
+      &:nth-child(4) {
+        top: 30%;
+        left: 25%;
+        width: 30%;
+        transform: rotate(25deg);
       }
 
-      @include respond(phone) {
-        grid-column: span 1;
-      }
-    }
-
-    &.project-card-medium {
-      grid-column: span 6;
-
-      @include respond(tab-land) {
-        grid-column: span 6;
-      }
-
-      @include respond(phone) {
-        grid-column: span 1;
-      }
-    }
-
-    &.project-card-small {
-      grid-column: span 4;
-
-      @include respond(tab-land) {
-        grid-column: span 6;
-      }
-
-      @include respond(phone) {
-        grid-column: span 1;
+      &:nth-child(5) {
+        bottom: 30%;
+        left: 30%;
+        width: 25%;
+        transform: rotate(-25deg);
       }
     }
   }
+
+  .ui-code {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .code-line {
+      height: 12px;
+      background: rgba(91, 127, 255, 0.3);
+      border-radius: 4px;
+      animation: codeGlow 2s infinite;
+
+      &.short {
+        width: 60%;
+      }
+
+      &:nth-child(1) { animation-delay: 0s; }
+      &:nth-child(2) { animation-delay: 0.2s; }
+      &:nth-child(3) { animation-delay: 0.4s; }
+      &:nth-child(4) { animation-delay: 0.6s; }
+    }
+  }
+
+  @keyframes growBar {
+    from { height: 0; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+  }
+
+  @keyframes codeGlow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+  }
+
+  .project-info {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $white-color;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(91, 127, 255, 0.3);
+  }
+
+  .project-description {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: auto;
+
+    a {
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(91, 127, 255, 0.15);
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.8rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(91, 127, 255, 0.3);
+
+      &:hover {
+        background: rgba(91, 127, 255, 0.3);
+        color: $white-color;
+        transform: translateY(-4px) scale(1.1);
+        box-shadow: 0 8px 20px rgba(91, 127, 255, 0.4);
+      }
+    }
+  }
+}
 
   .project-card {
     background: $white-color;

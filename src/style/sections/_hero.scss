@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   padding: 12rem 0 8rem;
-  background: $gradient-hero;
+  background: transparent;
   position: relative;
   overflow: hidden;
 
@@ -89,11 +89,12 @@
 
   .hero-greeting {
     font-size: 1.8rem;
-    color: $primary-color;
+    color: rgba(91, 127, 255, 0.9);
     font-weight: 500;
     margin-bottom: 1.2rem;
     font-family: 'Inter', sans-serif;
     letter-spacing: 0.02em;
+    text-shadow: 0 0 10px rgba(91, 127, 255, 0.5);
   }
 
   .hero-title {
@@ -101,7 +102,8 @@
     font-weight: 800;
     line-height: 1.15;
     margin-bottom: 1.8rem;
-    color: $dark-text;
+    color: $white-color;
+    text-shadow: 0 0 30px rgba(91, 127, 255, 0.4);
 
     @include respond(tab-land) {
       font-size: 5rem;
@@ -128,8 +130,9 @@
   .hero-subtitle {
     font-size: 3.6rem;
     font-weight: 600;
-    color: $light-text;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
 
     @include respond(tab-port) {
       font-size: 2.8rem;
@@ -143,7 +146,7 @@
   .hero-description {
     font-size: 1.8rem;
     line-height: 1.85;
-    color: $light-text;
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 3.5rem;
     max-width: 650px;
     font-weight: 400;
@@ -216,4 +219,6 @@
     transform: translateY(0);
   }
 }
+
+
 

@@ -1,6 +1,6 @@
 #experience {
   padding: $section-padding;
-  background: $white-color;
+  background: transparent;
   position: relative;
 
   .experience-timeline {
@@ -62,16 +62,19 @@
   }
 
   .experience-content {
-    background: $warm-bg;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
     border-radius: 16px;
     padding: 3.5rem;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(91, 127, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 
     &:hover {
-      box-shadow: 0 8px 24px rgba(91, 127, 255, 0.12);
+      box-shadow: 0 12px 40px rgba(91, 127, 255, 0.3);
       transform: translateX(8px);
-      border-color: rgba(91, 127, 255, 0.1);
+      border-color: rgba(91, 127, 255, 0.4);
+      background: rgba(255, 255, 255, 0.08);
     }
   }
 
@@ -92,18 +95,18 @@
   .experience-title {
     font-size: 2.4rem;
     font-weight: 700;
-    color: $dark-text;
+    color: $white-color;
   }
 
   .experience-company {
     font-size: 1.8rem;
-    color: $primary-color;
+    color: rgba(91, 127, 255, 0.9);
     font-weight: 600;
   }
 
   .experience-date {
     font-size: 1.4rem;
-    color: $light-text;
+    color: rgba(255, 255, 255, 0.6);
     font-family: 'Inter', sans-serif;
     font-weight: 500;
   }
@@ -112,7 +115,7 @@
     p {
       font-size: 1.6rem;
       line-height: 1.8;
-      color: $light-text;
+      color: rgba(255, 255, 255, 0.8);
       margin-bottom: 1.5rem;
     }
   }
@@ -127,16 +130,18 @@
     li {
       font-size: 1.3rem;
       padding: 0.6rem 1.4rem;
-      background: $white-color;
+      background: rgba(91, 127, 255, 0.15);
+      backdrop-filter: blur(10px);
       border-radius: 8px;
-      color: $primary-color;
+      color: rgba(255, 255, 255, 0.9);
       font-weight: 500;
-      border: 1px solid rgba(91, 127, 255, 0.15);
+      border: 1px solid rgba(91, 127, 255, 0.3);
       transition: all $transition-fast;
 
       &:hover {
-        background: rgba(91, 127, 255, 0.08);
+        background: rgba(91, 127, 255, 0.25);
         transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(91, 127, 255, 0.3);
       }
     }
   }

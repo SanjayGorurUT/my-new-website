@@ -1,8 +1,9 @@
 .footer {
-  background-color: $dark-bg;
+  background: transparent;
   color: $white-color;
   padding: 4rem 0;
   position: relative;
+  border-top: 1px solid rgba(91, 127, 255, 0.2);
 
   &-content {
     display: flex;
@@ -18,7 +19,7 @@
   }
 
   &-text {
-    color: $light-text;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 1.4rem;
   }
 
@@ -34,15 +35,17 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      color: $light-text;
+      background: rgba(91, 127, 255, 0.15);
+      color: rgba(255, 255, 255, 0.8);
       font-size: 1.8rem;
       transition: all $transition-base;
+      border: 1px solid rgba(91, 127, 255, 0.3);
 
       &:hover {
-        background: $primary-color;
+        background: rgba(91, 127, 255, 0.3);
         color: $white-color;
-        transform: translateY(-3px);
+        transform: translateY(-3px) scale(1.1);
+        box-shadow: 0 8px 20px rgba(91, 127, 255, 0.4);
       }
     }
   }
@@ -57,13 +60,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $primary-color;
+  background: rgba(91, 127, 255, 0.3);
+  backdrop-filter: blur(10px);
   border-radius: 50%;
   color: $white-color;
   font-size: 2rem;
   text-decoration: none;
-  box-shadow: $shadow-md;
+  box-shadow: 0 4px 20px rgba(91, 127, 255, 0.3);
   transition: all $transition-base;
+  border: 1px solid rgba(91, 127, 255, 0.4);
 
   @include respond(phone) {
     position: static;
@@ -71,9 +76,9 @@
   }
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: $shadow-lg;
-    background: $secondary-color;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 30px rgba(91, 127, 255, 0.5);
+    background: rgba(91, 127, 255, 0.5);
   }
 }
 

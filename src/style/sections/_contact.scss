@@ -1,6 +1,6 @@
 #contact {
   padding: $section-padding;
-  background: $warm-bg;
+  background: transparent;
   position: relative;
 
   .contact-wrapper {
@@ -23,7 +23,7 @@
   .contact-text {
     font-size: 1.9rem;
     line-height: 1.85;
-    color: $light-text;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 4rem;
     max-width: 650px;
 

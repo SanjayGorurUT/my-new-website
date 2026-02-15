@@ -18,8 +18,9 @@ body {
   font-size: $default-font-size;
   line-height: 1.6;
   color: $dark-text;
-  background-color: $white-color;
+  background-color: transparent;
   overflow-x: hidden;
+  position: relative;
 }
 
 .container {
@@ -41,29 +42,15 @@ body {
 }
 
 .section-title {
-  font-size: 3.2rem;
+  font-size: 4rem;
   font-weight: 800;
-  color: $dark-text;
+  color: $white-color;
   margin-bottom: 5rem;
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  white-space: nowrap;
   letter-spacing: -0.03em;
+  text-shadow: 0 0 20px rgba(91, 127, 255, 0.3);
 
   @include respond(phone) {
-    font-size: 2.6rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .section-number {
-    color: $primary-color;
-    font-family: 'Inter', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 600;
-    opacity: 0.8;
+    font-size: 3rem;
   }
 }
 
@@ -73,13 +60,13 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(10, 14, 39, 0.8);
   backdrop-filter: blur(20px);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   padding: 1.8rem 0;
   transition: all $transition-base;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(91, 127, 255, 0.2);
 
   &-content {
     display: flex;
@@ -90,13 +77,16 @@ body {
   &-brand {
     font-size: 2.2rem;
     font-weight: 800;
-    color: $primary-color;
+    color: rgba(91, 127, 255, 0.9);
     text-decoration: none;
     letter-spacing: -0.02em;
     transition: all $transition-fast;
+    text-shadow: 0 0 10px rgba(91, 127, 255, 0.5);
 
     &:hover {
       transform: scale(1.05);
+      color: rgba(255, 255, 255, 1);
+      text-shadow: 0 0 20px rgba(91, 127, 255, 0.8);
     }
   }
 
@@ -115,11 +105,11 @@ body {
     }
 
     li a {
-      color: $dark-text;
+      color: rgba(255, 255, 255, 0.8);
       text-decoration: none;
       font-size: 1.4rem;
       font-weight: 500;
-      transition: color $transition-fast;
+      transition: all $transition-fast;
       position: relative;
 
       &::after {
@@ -129,12 +119,14 @@ body {
         left: 0;
         width: 0;
         height: 2px;
-        background: $primary-color;
+        background: rgba(91, 127, 255, 0.9);
         transition: width $transition-base;
+        box-shadow: 0 0 10px rgba(91, 127, 255, 0.5);
       }
 
       &:hover {
-        color: $primary-color;
+        color: rgba(255, 255, 255, 1);
+        text-shadow: 0 0 10px rgba(91, 127, 255, 0.5);
 
         &::after {
           width: 100%;
