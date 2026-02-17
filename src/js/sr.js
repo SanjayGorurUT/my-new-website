@@ -52,17 +52,32 @@ export default function() {
     opacity: 0
   });
 
-  /* Experience Section */
-  ScrollReveal().reveal('.experience-item', {
+  ScrollReveal().reveal('.about-experience', {
+    ...defaultProps,
+    delay: 800,
+    origin: 'bottom',
+    distance: '40px',
+    opacity: 0
+  });
+
+  /* Work Section */
+  ScrollReveal().reveal('.work-subtitle', {
+    ...defaultProps,
+    delay: 200,
+    origin: 'bottom',
+    distance: '30px',
+    opacity: 0
+  });
+
+  ScrollReveal().reveal('.project-card', {
     ...defaultProps,
     delay: 300,
-    origin: 'left',
+    origin: 'bottom',
     distance: '60px',
     opacity: 0,
     interval: 200
   });
 
-  /* Skills Section */
   ScrollReveal().reveal('.skill-category', {
     ...defaultProps,
     delay: 200,
@@ -70,16 +85,6 @@ export default function() {
     distance: '50px',
     opacity: 0,
     interval: 150
-  });
-
-  /* Projects Section */
-  ScrollReveal().reveal('.project-card', {
-    ...defaultProps,
-    delay: 200,
-    origin: 'bottom',
-    distance: '60px',
-    opacity: 0,
-    interval: 200
   });
 
   /* Contact Section */

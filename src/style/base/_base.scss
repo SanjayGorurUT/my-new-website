@@ -42,15 +42,17 @@ body {
 }
 
 .section-title {
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 3.5rem;
+  font-weight: 700;
   color: $white-color;
-  margin-bottom: 5rem;
-  letter-spacing: -0.03em;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
   text-shadow: 0 0 20px rgba(91, 127, 255, 0.3);
+  line-height: 1.2;
 
   @include respond(phone) {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
   }
 }
 
