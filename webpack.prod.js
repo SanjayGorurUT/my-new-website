@@ -35,6 +35,13 @@ const htmlPlugins = [
     favicon: './src/assets/favicon.png',
     chunks: ['vendor', 'main'],
     minify: minifyOptions
+  }),
+  new HtmlWebpackPlugin({
+    template: './src/group-ultimate-guitar.html',
+    filename: 'projects/group/ultimate-guitar-song-decomposition/index.html',
+    favicon: './src/assets/favicon.png',
+    chunks: ['vendor', 'main'],
+    minify: minifyOptions
   })
 ];
 

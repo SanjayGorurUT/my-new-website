@@ -7,6 +7,11 @@
   to = "/projects/programming-intro/"
   status = 301
 
+[[redirects]]
+  from = "/projects/group/ultimate-guitar-song-decomposition"
+  to = "/projects/group/ultimate-guitar-song-decomposition/"
+  status = 301
+
 # Use Node 16 which doesn't require --openssl-legacy-provider
 # This avoids the NODE_OPTIONS restriction on Netlify
 [build.environment]

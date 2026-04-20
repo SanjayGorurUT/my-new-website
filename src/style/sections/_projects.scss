@@ -193,6 +193,30 @@
     gap: 1.5rem;
   }
 
+  .project-badge {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    margin: 0 0 0.5rem;
+
+    &--group {
+      background: rgba(124, 58, 237, 0.25);
+      color: rgba(196, 181, 253, 0.95);
+      border: 1px solid rgba(124, 58, 237, 0.45);
+    }
+
+    &--individual {
+      background: rgba(91, 127, 255, 0.2);
+      color: rgba(165, 180, 252, 0.95);
+      border: 1px solid rgba(91, 127, 255, 0.4);
+    }
+  }
+
   .project-title {
     font-size: 2.2rem;
     font-weight: 700;

@@ -24,6 +24,12 @@ const htmlPlugins = [
     filename: 'projects/programming-intro/index.html',
     favicon: './src/assets/favicon.png',
     chunks: ['vendor', 'main']
+  }),
+  new HtmlWebpackPlugin({
+    template: './src/group-ultimate-guitar.html',
+    filename: 'projects/group/ultimate-guitar-song-decomposition/index.html',
+    favicon: './src/assets/favicon.png',
+    chunks: ['vendor', 'main']
   })
 ];
 
