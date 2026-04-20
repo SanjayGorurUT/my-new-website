@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "dist"
 
+[[redirects]]
+  from = "/projects/programming-intro"
+  to = "/projects/programming-intro/"
+  status = 301
+
 # Use Node 16 which doesn't require --openssl-legacy-provider
 # This avoids the NODE_OPTIONS restriction on Netlify
 [build.environment]

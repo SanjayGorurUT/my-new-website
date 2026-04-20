@@ -95,4 +95,14 @@ export default function() {
     distance: '50px',
     opacity: 0
   });
+
+  /* Case study subpages */
+  ScrollReveal().reveal('.case-study__reveal', {
+    ...defaultProps,
+    delay: 80,
+    origin: 'bottom',
+    distance: '36px',
+    opacity: 0,
+    interval: 100
+  });
 }

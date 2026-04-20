@@ -12,18 +12,33 @@ try {
   process.exit(1);
 }
 
+const htmlPlugins = [
+  new HtmlWebpackPlugin({
+    template: './src/template.html',
+    filename: 'index.html',
+    favicon: './src/assets/favicon.png',
+    chunks: ['vendor', 'main']
+  }),
+  new HtmlWebpackPlugin({
+    template: './src/programming-intro.html',
+    filename: 'projects/programming-intro/index.html',
+    favicon: './src/assets/favicon.png',
+    chunks: ['vendor', 'main']
+  })
+];
+
 module.exports = merge(common, {
   mode: 'development',
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/template.html',
-      favicon: './src/assets/favicon.png'
-    })
-  ],
+  devServer: {
+    historyApiFallback: false,
+    publicPath: '/'
+  },
+  plugins: [...htmlPlugins],
   module: {
     rules: [
       {

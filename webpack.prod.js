@@ -5,7 +5,6 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 
 // Ensure we use sass (Dart Sass) instead of node-sass
 let sassImplementation;
@@ -16,32 +15,45 @@ try {
   process.exit(1);
 }
 
+const minifyOptions = {
+  removeAttributeQuotes: true,
+  collapseWhitespace: true,
+  removeComments: true
+};
+
+const htmlPlugins = [
+  new HtmlWebpackPlugin({
+    template: './src/template.html',
+    filename: 'index.html',
+    favicon: './src/assets/favicon.png',
+    chunks: ['vendor', 'main'],
+    minify: minifyOptions
+  }),
+  new HtmlWebpackPlugin({
+    template: './src/programming-intro.html',
+    filename: 'projects/programming-intro/index.html',
+    favicon: './src/assets/favicon.png',
+    chunks: ['vendor', 'main'],
+    minify: minifyOptions
+  })
+];
+
 module.exports = merge(common, {
   mode: 'production',
   output: {
     filename: '[name].[contentHash].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   optimization: {
-    minimizer: [
-      new OptimizeCssAssetsPlugin(),
-      new TerserPlugin(),
-      new HtmlWebpackPlugin({
-        template: './src/template.html',
-        favicon: './src/assets/favicon.png',
-        minify: {
-          removeAttributeQuotes: true,
-          collapseWhitespace: true,
-          removeComments: true
-        }
-      })
-    ]
+    minimizer: [new OptimizeCssAssetsPlugin()]
   },
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].[contentHash].css'
-    })
+    }),
+    ...htmlPlugins
   ],
   module: {
     rules: [

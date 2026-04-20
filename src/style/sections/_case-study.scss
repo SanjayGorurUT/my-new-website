@@ -1,0 +1,147 @@
+// Long-form case study pages (e.g. /projects/programming-intro/)
+.case-study-page {
+  min-height: 100vh;
+  padding: 10rem 0 8rem;
+
+  .case-study-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .case-study-eyebrow {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(91, 127, 255, 0.95);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .case-study-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: $white-color;
+    line-height: 1.15;
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  .case-study-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.75);
+
+    span strong {
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .case-study-highlights {
+    background: rgba(91, 127, 255, 0.12);
+    border: 1px solid rgba(91, 127, 255, 0.35);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: $white-color;
+      margin-bottom: 1.2rem;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 2rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.5rem;
+      line-height: 1.7;
+
+      li {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+
+  .case-study__reveal {
+    margin-bottom: 4rem;
+  }
+
+  .case-band {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.95) 0%, rgba(49, 46, 129, 0.9) 100%);
+    color: $white-color;
+    padding: 1.8rem 2.5rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  .case-body {
+    font-size: 1.65rem;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.82);
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $white-color;
+      margin: 2.5rem 0 1.2rem;
+    }
+
+    ul {
+      margin: 0 0 1.5rem;
+      padding-left: 2rem;
+
+      li {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+
+  .case-media-placeholder {
+    background: rgba(255, 255, 255, 0.06);
+    border: 2px dashed rgba(91, 127, 255, 0.4);
+    border-radius: 12px;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .case-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(91, 127, 255, 0.95);
+    margin-bottom: 3rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $white-color;
+    }
+  }
+}
+
+.navbar--subpage .navbar-brand {
+  cursor: pointer;
+}
