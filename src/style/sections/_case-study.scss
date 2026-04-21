@@ -1,7 +1,18 @@
 // Long-form case study pages (e.g. /projects/programming-intro/)
+// Global `section` uses $section-padding (12rem vertical) — that stacks huge gaps above
+// each case-study block. Reset padding here so only our margins control rhythm.
 .case-study-page {
   min-height: 100vh;
   padding: 10rem 0 5rem;
+
+  section {
+    padding: 0;
+    margin: 0;
+
+    @include respond(phone) {
+      padding: 0;
+    }
+  }
 
   &--longform .case-study-inner {
     max-width: 960px;
