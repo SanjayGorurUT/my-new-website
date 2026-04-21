@@ -1,7 +1,7 @@
 // Long-form case study pages (e.g. /projects/programming-intro/)
 .case-study-page {
   min-height: 100vh;
-  padding: 10rem 0 8rem;
+  padding: 10rem 0 5rem;
 
   &--longform .case-study-inner {
     max-width: 960px;
@@ -17,7 +17,7 @@
     font-size: 1.8rem;
     line-height: 1.75;
     color: rgba(255, 255, 255, 0.78);
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     max-width: 720px;
   }
 
@@ -26,8 +26,8 @@
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.65);
     font-style: italic;
-    margin-bottom: 1.5rem;
-    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1.25rem;
     background: rgba(255, 255, 255, 0.04);
     border-radius: 8px;
     border-left: 3px solid rgba(91, 127, 255, 0.6);
@@ -57,7 +57,7 @@
     font-weight: 800;
     color: $white-color;
     line-height: 1.15;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     letter-spacing: -0.03em;
 
     @include respond(phone) {
@@ -69,7 +69,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.75);
 
@@ -84,14 +84,14 @@
     background: rgba(91, 127, 255, 0.12);
     border: 1px solid rgba(91, 127, 255, 0.35);
     border-radius: 12px;
-    padding: 2rem 2.5rem;
-    margin-bottom: 4rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.75rem;
 
     h2 {
       font-size: 1.6rem;
       font-weight: 700;
       color: $white-color;
-      margin-bottom: 1.2rem;
+      margin-bottom: 0.75rem;
     }
 
     ul {
@@ -108,15 +108,19 @@
   }
 
   .case-study__reveal {
-    margin-bottom: 4rem;
+    margin-bottom: 1.75rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .case-band {
     background: linear-gradient(135deg, rgba(30, 58, 138, 0.95) 0%, rgba(49, 46, 129, 0.9) 100%);
     color: $white-color;
-    padding: 1.8rem 2.5rem;
+    padding: 1.25rem 1.75rem;
     border-radius: 8px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -124,7 +128,7 @@
 
     &--sub {
       font-size: 1.75rem;
-      padding: 1.4rem 2rem;
+      padding: 1rem 1.5rem;
       background: linear-gradient(135deg, rgba(55, 65, 120, 0.92) 0%, rgba(67, 56, 130, 0.88) 100%);
     }
   }
@@ -135,22 +139,26 @@
     color: rgba(255, 255, 255, 0.82);
 
     p {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     h3 {
       font-size: 2rem;
       font-weight: 700;
       color: $white-color;
-      margin: 2.5rem 0 1.2rem;
+      margin: 1rem 0 0.5rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     ul {
-      margin: 0 0 1.5rem;
+      margin: 0 0 1rem;
       padding-left: 2rem;
 
       li {
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.5rem;
       }
     }
   }
@@ -159,11 +167,11 @@
     background: rgba(255, 255, 255, 0.06);
     border: 2px dashed rgba(91, 127, 255, 0.4);
     border-radius: 12px;
-    padding: 4rem 2rem;
+    padding: 2.5rem 1.5rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.55);
     font-size: 1.5rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 
   .case-back {
@@ -173,7 +181,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     color: rgba(91, 127, 255, 0.95);
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     transition: color 0.2s ease;
 
     &:hover {
