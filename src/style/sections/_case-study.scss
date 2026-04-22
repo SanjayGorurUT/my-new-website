@@ -194,6 +194,16 @@
     margin: 0.75rem 0 0.25rem;
   }
 
+  .case-gif-image {
+    width: 100%;
+    max-width: 320px;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid rgba(91, 127, 255, 0.35);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+    margin: 0.75rem auto 0.25rem;
+  }
+
   .case-back {
     display: inline-flex;
     align-items: center;
