@@ -204,6 +204,19 @@
     margin: 0.75rem auto 0.25rem;
   }
 
+  .case-lofi-pair {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin: 0.5rem 0 0.25rem;
+
+    .case-gif-image {
+      margin: 0;
+      flex: 0 1 auto;
+    }
+  }
+
   .case-back {
     display: inline-flex;
     align-items: center;
